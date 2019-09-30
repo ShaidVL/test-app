@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+            <form class="col-sm-4 fixed-top">
+                <div class="form-group">
+                    <label>Наименование учреждения</label>
+                    <input id="organization-name" type="text" class="form-control" placeholder="Введите наименование учреждения">
+                </div>
+                <div class="form-group">
+                    <label>Адрес</label>
+                    <input id="address" type="text" class="form-control" placeholder="Введите адрес">
+                </div>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input id="phone" type="text" class="form-control" placeholder="Введите телефон">
+                </div>
+                <div class="form-group">
+                    <label>Родитель подразделения</label>
+                    <select id="organization-parent" class="form-control">
+                        <option id="select-org-none">Выберите родительскую организацию</option>
+                    </select>
+                </div>
+                    <button id="data-save-btn" class="btn btn-primary">Сохранить</button>
+                    <button id="data-delete-btn" class="btn btn-danger">Удалить</button>
+            </form>
+        </div>
+        <div class="col-sm-8">
+            <table class="table table-fixed">
+                <thead>
+                <tr>
+                    <th scope="col" class="col-4">Наименование учреждения</th>
+                    <th scope="col" class="col-4">Адрес</th>
+                    <th scope="col" class="col-4">Телефон</th>
+                </tr>
+                </thead>
+                <tbody id="data-lpu">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="js/index.js" type="module"></script>
+</body>
+</html>
