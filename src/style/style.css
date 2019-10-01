@@ -17,12 +17,12 @@
 .table-fixed thead > tr > th {
     float: left;
     position: relative;
-} ::after {
+}  ::after {
     content: '';
     clear: both;
     display: block;
 }
 
-  .selected-row{
-      background: #a5e2ff;
-  }
+.selected-row {
+    background: #a5e2ff;
+}
