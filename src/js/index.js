@@ -82,12 +82,13 @@ function addRowInTable(organization) {
             lastSelectedEl = currentSelectedEl;
             currentSelectedEl = rowEl;
             selectedId = rowEl.getAttribute('id').slice(10);
-            selectedElementOnTable(organization);
+            selectedElementOnTable();
         }
     });
 }
 
-function selectedElementOnTable(organization) {
+function selectedElementOnTable() {
+    const organization = initialLpuArray.find(item=>item.id === selectedId);
     if (lastSelectedEl && lastSelectedEl.classList) {
         lastSelectedEl.classList.remove('selected-row');
         organizationNameInput.value = '';
@@ -178,6 +179,7 @@ function editSelectedOrganization() {
         address: addressInput.value,
         phone: phoneInput.value,
     };
+
     if (selectEl.selectedIndex) {
         editOrganization.hid = selectEl.selectedOptions[0].id.slice(11);
     }
