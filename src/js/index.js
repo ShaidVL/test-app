@@ -27,7 +27,7 @@ saveButtonEl.addEventListener('click', event => {
         alert('Заполните поле \'Наименование учереждения\'');
         return;
     }
-    if (initialLpuArray.some(elem => elem.full_name === organizationNameInput.value) &&
+    if (!currentSelectedEl && initialLpuArray.some(elem => elem.full_name === organizationNameInput.value) &&
         !confirm('Такое наименование организации уже существует. Создать?')) {
         return;
     }
