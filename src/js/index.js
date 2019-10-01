@@ -138,6 +138,10 @@ function removeElement(id) {
     selectEl.removeChild(removeOptionEl);
     initialLpuArray = initialLpuArray.filter(event => event.id !== id);
     localStorage.setItem('lpu', JSON.stringify(initialLpuArray));
+    organizationNameInput.value = '';
+    addressInput.value = '';
+    phoneInput.value = '';
+    selectEl.selectedIndex = 0;
 }
 
 function addNewOrganization() {
